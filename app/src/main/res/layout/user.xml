@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/primary_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/second_bg">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@mipmap/boy" />
+
+        <ImageView
+            android:id="@+id/userexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/exit"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/imageView">
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/user_login_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                app:qmui_borderColor="@color/white"
+                app:qmui_borderWidth="0.5dp"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/order"
+                style="@style/user_shop_item"
+                android:drawableTop="@mipmap/order"
+                android:textAlignment="center"
+                android:text="订单"/>
+
+            <TextView
+                android:id="@+id/cart"
+                style="@style/user_shop_item"
+                android:drawableTop="@mipmap/shoppingcart"
+                android:text="购物车"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/coupon"
+                style="@style/user_shop_item"
+                android:drawableTop="@mipmap/coupon"
+                android:text="优惠券"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/collect"
+                style="@style/user_shop_item"
+                android:drawableTop="@mipmap/collect"
+                android:text="收藏"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+        android:id="@+id/groupListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+        android:id="@+id/constitution"
+        style="@style/user_menu_item"
+            />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/constitution_test"
+            style="@style/user_menu_item" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/disease_manage"
+            style="@style/user_menu_item" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/family_friends"
+            style="@style/user_menu_item" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/healthy_manage"
+            style="@style/user_menu_item" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/user_option"
+            style="@style/user_menu_item" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/option"
+            style="@style/user_menu_item" />
+    </com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView>
+</LinearLayout>
+</ScrollView>

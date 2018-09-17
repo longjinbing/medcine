@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/primary_bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/green_normal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@mipmap/boy" />
+
+        <ImageView
+            android:id="@+id/userexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/exit"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/imageView">
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/user_login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/button_radius"
+                android:gravity="center"
+                android:text="点此登录"
+                android:textColor="@color/primary_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/user_operation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/orders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/order"
+                android:text="订单"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/shopcar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/shoppingcart"
+                android:text="购物车"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/youhuijuan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/coupon"
+                android:text="优惠券"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/collect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/collect"
+                android:text="收藏"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+        android:id="@+id/groupListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView>
+    <RelativeLayout
+        android:id="@+id/mybody"
+        style="@style/user_info_menu"
+        android:layout_marginTop="8dp"
+        >
+        <ImageView
+            android:background="@mipmap/tizhi"
+            style="@style/user_info_menu_pic"/>
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="我的体质"
+            />
+
+        <TextView
+            android:id="@+id/tizhiqingkuang"
+            style="@style/user_info_menu_tip"
+            android:text="请先登录" />
+        <ImageView
+            style="@style/user_info_menu_more"
+            android:background="@mipmap/more"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bingli"
+        style="@style/user_info_menu">
+
+        <ImageView
+            style="@style/user_info_menu_pic"
+            android:background="@mipmap/bingli" />
+
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="慢病管理" />
+
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pengyou"
+        style="@style/user_info_menu">
+
+        <ImageView
+            style="@style/user_info_menu_pic"
+            android:background="@mipmap/pengyou" />
+
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="家人和朋友" />
+
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jiankang"
+        style="@style/user_info_menu">
+
+        <ImageView
+            style="@style/user_info_menu_pic"
+            android:background="@mipmap/jiankang" />
+
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="健康管理" />
+
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ceshi"
+        style="@style/user_info_menu">
+
+        <ImageView
+            style="@style/user_info_menu_pic"
+            android:background="@mipmap/ceshi" />
+
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="体质测试" />
+
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text="" />
+
+        <ImageView
+            style="@style/user_info_menu_more"
+            android:background="@mipmap/more" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/gexing"
+        style="@style/user_info_menu">
+
+        <ImageView
+            style="@style/user_info_menu_pic"
+            android:background="@mipmap/gexing" />
+
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="个性设置" />
+
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text="" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/userfankui"
+        style="@style/user_info_menu" >
+        <ImageView
+            android:background="@mipmap/yonghufankui"
+            style="@style/user_info_menu_pic"/>
+        <TextView
+            style="@style/user_info_menu_txt"
+            android:text="用户反馈"
+            />
+        <TextView
+            style="@style/user_info_menu_tip"
+            android:text=""/>
+    </RelativeLayout>
+    <RelativeLayout
+    android:id="@+id/lianxiwomen"
+    style="@style/user_info_menu" >
+    <ImageView
+        android:background="@mipmap/lianxiwomen"
+        style="@style/user_info_menu_pic"/>
+    <TextView
+        style="@style/user_info_menu_txt"
+        android:text="联系我们"
+        />
+    <TextView
+        style="@style/user_info_menu_tip"
+        android:text=""/>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/exit"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/primary_color">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="退出账号"
+            />
+    </RelativeLayout>
+</LinearLayout>
+</ScrollView>

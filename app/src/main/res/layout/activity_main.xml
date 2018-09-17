@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ljb.main.MainActivity">
+   <RadioGroup
+       android:id="@+id/nav_bar"
+       android:layout_width="match_parent"
+       android:layout_height="56dp"
+       android:layout_alignParentBottom="true"
+       android:background="@color/primary_bg"
+       android:orientation="horizontal"
+       >
+       <RadioButton
+           android:id="@+id/nav_home"
+           style="@style/nav_item"
+           android:drawableTop="@drawable/nav_home"
+           android:text="首页"/>
+       <RadioButton
+           android:id="@+id/nav_cook"
+           style="@style/nav_item"
+           android:drawableTop="@drawable/nav_cook"
+           android:text="调养"/>
+       <RadioButton
+           android:id="@+id/nav_store"
+           style="@style/nav_item"
+           android:drawableTop="@drawable/nav_store"
+           android:text="商城"/>
+       <RadioButton
+           android:id="@+id/nav_user"
+           style="@style/nav_item"
+           android:drawableTop="@drawable/nav_user"
+           android:text="我的"/>
+
+   </RadioGroup>
+
+
+<View
+    android:id="@+id/nav_bardivide"
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/lightgrey"
+    android:layout_above="@id/nav_bar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_bardivide"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary_bg">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>
