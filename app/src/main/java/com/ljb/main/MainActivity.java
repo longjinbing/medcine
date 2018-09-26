@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements BackHandledInterf
     public void BindViews() {
         nav_bar.setOnCheckedChangeListener(this);
         viewPager.setAdapter(mAdapter);
+        viewPager.setOffscreenPageLimit(3);
         viewPager.setCurrentItem(0);
         viewPager.addOnPageChangeListener(this);
     }
